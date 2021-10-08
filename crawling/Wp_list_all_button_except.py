@@ -79,6 +79,12 @@ for i in range(0,12):
     except NoSuchElementException:
         # 리뷰 더보기 클릭
         driver.find_element_by_xpath('//*[@id="root"]/div/div[1]/section/div/div/div/div/div/div[1]/div[1]/div/div/section[5]/div[1]/div/header/div/div/a').click()
+        
+        # 평점
+        score = []
+        # 리뷰 내용
+        content= []
+
         boxes = driver.find_elements_by_css_selector("#root > div > div.css-1fgu4u8 > section > section > div > div > div > ul")
 
         SCROLL_PAUSE_SEC = 1
