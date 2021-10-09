@@ -65,8 +65,10 @@ for i in range(0,50):
             for box in boxes:
                 score.append(box.find_element_by_css_selector("li > div > div.ratings").text)
                 date.append(box.find_element_by_css_selector("li > div > strong > span > span.txt_date").text)
-                review.append(box.find_element_by_css_selector("li > div > p").text)
-
+                reviewpre = box.find_element_by_css_selector("li > div > p").text
+                reviewpre = reviewpre.replace('\n','') # '\n' 제거
+                review.append(reviewpre)
+                
             # print(score)
             # print(date)
             # print(review)
